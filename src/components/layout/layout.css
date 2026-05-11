@@ -1,0 +1,108 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.collapse-btn {
+  padding: 0.5rem 0.75rem;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.collapse-btn:hover {
+  background: #333;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  flex: 1;
+  overflow: hidden;
+  transition: grid-template-columns 0.3s ease;
+}
+
+.app-main.sidebar-collapsed {
+  grid-template-columns: 50px 1fr;
+}
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f;
+  border-right: 1px solid #333;
+  overflow: hidden;
+}
+
+.sidebar-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.app-content {
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+.canvas-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #555;
+  font-size: 1.125rem;
+}
+
+.panel-placeholder {
+  padding: 1rem;
+}
+
+.panel-placeholder h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.panel-placeholder p {
+  margin: 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,225 @@
+.frame-marker-editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  gap: 16px;
+}
+
+.frame-marker-editor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.frame-marker-editor__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.frame-marker-editor__frame-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.frame-marker-editor__nav-btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.frame-marker-editor__nav-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.frame-marker-editor__nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.frame-marker-editor__frame-counter {
+  font-size: 0.875rem;
+  color: #6b7280;
+  min-width: 100px;
+  text-align: center;
+}
+
+.frame-marker-editor__main {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  min-height: 0;
+}
+
+.frame-marker-editor__canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1f2937;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.frame-marker-editor__canvas {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+  cursor: crosshair;
+}
+
+.frame-marker-editor__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+}
+
+.frame-marker-editor__sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.frame-marker-editor__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.frame-marker-editor__controls h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.frame-marker-editor__marker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frame-marker-editor__marker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.frame-marker-editor__marker-item:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.frame-marker-editor__marker-item.active {
+  border-color: var(--marker-color, #3b82f6);
+  background: #eff6ff;
+}
+
+.frame-marker-editor__marker-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.frame-marker-editor__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frame-marker-editor__action-btn {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.frame-marker-editor__action-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.frame-marker-editor__action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.frame-marker-editor__action-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.frame-marker-editor__edit-hint {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.frame-marker-editor__options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.frame-marker-editor__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.frame-marker-editor__scale-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.frame-marker-editor__scale-control label {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.frame-marker-editor__scale-control input[type="range"] {
+  width: 100%;
+}
+
+.frame-marker-editor__marker-info {
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  text-align: center;
+}

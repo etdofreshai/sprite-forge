@@ -1,0 +1,103 @@
+.interactive-canvas {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 8px;
+}
+
+.interactive-canvas__container {
+  flex: 1;
+  position: relative;
+  background: #1f2937;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 200px;
+  cursor: grab;
+}
+
+.interactive-canvas__container:active {
+  cursor: grabbing;
+}
+
+.interactive-canvas__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  image-rendering: pixelated;
+  pointer-events: auto;
+}
+
+.interactive-canvas__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-size: 1rem;
+  gap: 8px;
+}
+
+.interactive-canvas__placeholder-hint {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.interactive-canvas__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  gap: 12px;
+}
+
+.interactive-canvas__zoom-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding: 6px 12px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  font-variant-numeric: tabular-nums;
+}
+
+.interactive-canvas__actions {
+  display: flex;
+  gap: 4px;
+}
+
+.interactive-canvas__action-btn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.interactive-canvas__action-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.interactive-canvas__action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.interactive-canvas__hint {
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+}

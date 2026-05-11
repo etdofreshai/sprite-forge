@@ -1,0 +1,121 @@
+.export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.export-panel__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.export-panel__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.export-panel__stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.export-panel__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.export-panel__stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.export-panel__stat-value {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.export-panel__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.export-panel__progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.export-panel__progress-stage {
+  font-weight: 500;
+}
+
+.export-panel__progress-bar {
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.export-panel__progress-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.export-panel__result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.export-panel__result-text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #10b981;
+}
+
+.export-panel__download-btn {
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.export-panel__download-btn:hover {
+  background-color: #059669;
+}
+
+.export-panel__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.export-panel__export-btn {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.export-panel__export-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.export-panel__export-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
