@@ -10,11 +10,17 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM nginx:alpine
+FROM node:20-alpine-slim
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --omit=dev
+
+COPY --from=builder /app/dist ./dist
+COPY server.mjs .
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+ENV NODE_ENV=production
+CMD ["node", "server.mjs"]
