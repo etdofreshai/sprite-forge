@@ -1,5 +1,4 @@
 import express from 'express'
-import { createServer as createViteServer } from 'vite'
 import path from 'path'
 import fs from 'fs'
 import { fileURLToPath } from 'url'
@@ -88,6 +87,7 @@ async function startServer() {
       res.sendFile(path.join(distPath, 'index.html'))
     })
   } else {
+    const { createServer: createViteServer } = await import('vite')
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
